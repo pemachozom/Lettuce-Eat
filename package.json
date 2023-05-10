@@ -1,0 +1,30 @@
+{
+  "name": "lettuce-eat",
+  "version": "1.0.0",
+  "description": "to meet end user's requirement, making ITeria services convenient to both students and the cafe assistants and To improve the efficiency and effectiveness of ordering food",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/agilegroup3/lettuce-eat.git"
+  },
+  "author": "Group3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/agilegroup3/lettuce-eat/issues"
+  },
+  "homepage": "https://gitlab.com/agilegroup3/lettuce-eat#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
