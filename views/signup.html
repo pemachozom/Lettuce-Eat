@@ -128,17 +128,7 @@
 
         // Enable data-match validation for the confirm password field
         var confirmInput = document.getElementById('confirm-password');
-        // confirmInput.addEventListener('input', function (event) {
-        //     var password = document.getElementById('password');
-        //     if (confirmInput.value != password.value) {
-        //         confirmInput.setCustomValidity('Passwords do not match');
-        //         if (confirmInput.value == "") {
-        //             confirmInput.setCustomValidity('Please confirm your password.');
-        //         }
-        //     } else {
-        //         confirmInput.setCustomValidity('');
-        //     }
-        // });
+        
         // Handle form submission
         var form = document.querySelector('form');
         form.addEventListener('submit', function (event) {

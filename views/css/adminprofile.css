@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.woff2') format('woff2'),
+        url('fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* for header */
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
+}
+
+.navbar{
+    height: 90px;
+}
+.nav-link{
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+header {
+    background-color: #F3B989;
+}
+
+.navbar-nav {
+    background-color: #F3B989;
+}
+
+.nav-item {
+    background-color: #F3B989;
+}
+
+.navbar-nav .dashboard {
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: #F5F5F5;
+    background-color:  #F5F5F5;;
+}
+
+form {
+    position: relative;
+    margin-top: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #FFE7CC;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* UPDATE NOW button */
+.mybtn {
+    background-color: #FFFFFF;
+}
+
+.mybtn:hover {
+    background-color: #ef7e56;
+}
