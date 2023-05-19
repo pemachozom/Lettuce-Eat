@@ -6,6 +6,10 @@ module.exports = app
 // const port = 4000
 const userRouter = require('./routes/userRoutes')
 const viewRouter = require('./routes/viewRoutes')
+// menu 
+// const menuRouter= require('/routes/menuRoutes')
+
+
 const path = require('path')
 
 app.use(express.json())
@@ -15,6 +19,7 @@ app.use(express.static(__dirname+ "public"))
 
 app.use('/api/v1/users',userRouter)
 app.use('/', viewRouter)
+// app.use('/menu',menuRouter)
 
 app.use(express.static(path.join(__dirname, 'views')))
 // app.listen(port, () => {

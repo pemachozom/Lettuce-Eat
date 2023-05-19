@@ -8,8 +8,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- this link is for the boostrap link  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/login.css">
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
   </head>
+  <style>
+    body{
+      background-color: #FFFBEB;
+    }
+    *{
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #FFFBEB;
+
+}
+.navbar{
+    background-color: #F3B989;
+    background: #F3B989;
+}
+.navbar-brand img {
+    max-height: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  }
+  header{
+    background-color: #F3B989;
+  }
+  .navbar-brand{
+    background-color: #F3B989;
+  }
+.navbar-toggler{
+    background-color: #F3B989;
+}
+.collapse{
+    background-color: #F3B989;
+}
+.navbar-nav{
+    background-color: #F3B989;
+}
+.nav-item {
+    background-color: #F3B989;
+}
+.navbar-toggler-icon{
+    background-color: #F3B989;
+}
+   /* footer */
+   footer {
+    height: 150px;
+    background-color: #F8CBA6;
+    width: 100%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #F8CBA6;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: #F8CBA6;
+    padding: 20px 0;
+    font-size: 16px;
+  }
+  
+  .item1 {
+    grid-area: 1 / 1;
+    text-align: center;
+    font-size: 16px;
+  }
+  .item1 h5{
+    background-color: #F8CBA6;
+  }
+  .item1 p{
+    background-color: #F8CBA6;
+  }
+  .item3 {
+    grid-area: 1 / 3 ;
+    text-align: center;  
+  }
+  
+  .item3 a {
+    margin: 20px;
+    background-color: #F8CBA6;
+  }
+  .item3 h5{
+    background-color: #F8CBA6;
+  }
+  .item3 i{
+    background-color: #F8CBA6;
+  }
+
+  </style>
 
 <header>
     <nav class="navbar navbar-expand-lg ">
@@ -33,12 +126,90 @@
 </header>
 
   <body>
-   
+  
 
-    
    
+    <div class="container">
+      <h1 class="text-center">Menu List</h1>
     
+      <div class="text-center">
+        <ul class="nav nav-tabs mb-3 justify-content-center" id="menuTabs" role="tablist">
 
+          <li class="nav-items" role="presentation">
+            <a class="nav-link" id="view-all-tab" data-bs-toggle="tab" data-bs-target="#view-all-menu" role="tab" aria-controls="view-all-menu" aria-selected="false">All</a>
+          </li>
+
+          <li class="nav-items" role="presentation">
+            <a class="nav-link active" id="veg-tab" data-bs-toggle="tab" data-bs-target="#veg-menu" role="tab" aria-controls="veg-menu" aria-selected="true">Vegetarian</a>
+          </li>
+
+          <li class="nav-items" role="presentation">
+            <a class="nav-link" id="non-veg-tab" data-bs-toggle="tab" data-bs-target="#non-veg-menu" role="tab" aria-controls="non-veg-menu" aria-selected="false">Non-Vegetarian</a>
+          </li>
+         
+        </ul>
+      </div>
+
+      <div class="tab-content" id="menuTabsContent">
+        <div class="tab-pane fade show active" id="veg-menu" role="tabpanel" aria-labelledby="veg-tab">
+          <div class="container1">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Pizza Margherita</h3>
+                    <p>Our classic pizza with tomato sauce, mozzarella cheese, and fresh basil.</p>
+                    <p class="text-muted">$12.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Pesto Pasta</h3>
+                    <p>Spaghetti with our homemade pesto sauce, cherry tomatoes, and parmesan cheese.</p>
+                    <p class="text-muted">$10.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Grilled Chicken</h3>
+                    <p>Grilled chicken breast with a side of roasted vegetables.</p>
+                    <p class="text-muted">$14.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
+                  </div>
+                  <div class="col-md-6">
+                    <h3>Beef Burger</h3>
+                    <p>Our classic beef burger with lettuce, tomato, and pickles.</p>
+                    <p class="text-muted">$9.99</p>
+                    <a href="#" class="btn btn-primary">Order Now</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          
+      
+      
+      
+    </div>
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
       <footer>
