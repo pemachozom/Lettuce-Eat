@@ -76,6 +76,3 @@ exports.login = async (req, res, next) => {
 
     }
 }
-
-
-arwesdygijpokp[l];rtyvibuhijn;kom

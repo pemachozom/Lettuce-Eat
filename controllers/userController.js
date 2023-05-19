@@ -47,11 +47,3 @@ exports.deleteUser = async(req, res) => {
 }
 
 
-3aw5s4edrigjpo[kl
-
-dsaytbuiopmkl
-exrtcyvhubinjkml
-xercvibjno;km'l\
-zeyxtiojpk[
-    e5drguijo[pkf]
-]]

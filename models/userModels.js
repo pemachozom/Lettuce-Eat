@@ -82,13 +82,3 @@ module.exports = User
 
 
 
-sadzfxchujio
-qwearszdtxcgyuhjk
-wqaezsrtdxyugihjok
-qwEAZRSxdtcyugvbhijk
-qwEAZRSxdtcyugvbhijkqwertgyuijo
-waesrzdxtcfygvjuhkb
-QWEARSZTDXCYUGVBIJ
-WQEazrSXTDCYU
-WQERCUIO
-WAEZRSTXDCYGHIOJ

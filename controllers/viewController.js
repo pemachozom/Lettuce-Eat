@@ -15,15 +15,3 @@ exports.getSignupForm = (req, res) => {
 exports.getHome = (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'views' , 'index.html'))
 }
-
-
-qawesrtdyguhjiko
-waesdrfgh
-awerstdfyg
-WASERDTFJH
-awserdfhj
-ASDFGHJBK
-WAESRDTYGJK
-qawesrfuhji
-qawesrdtyguhij
-aWZEsrdtgyuhji
