@@ -101,7 +101,23 @@
   .item3 i{
     background-color: #F8CBA6;
   }
-
+  .container h5{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+  }
+  .food-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+  
+      .food-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 10px;
+      }
   </style>
 
 <header>
@@ -111,106 +127,170 @@
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="./index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="./aboutus.html">About Us</a>
-      </li>
-    </ul>
-  </div> -->
+
 </nav>
 
 </header>
 
   <body>
-  
 
-   
+
     <div class="container">
-      <h1 class="text-center">Menu List</h1>
-    
-      <div class="text-center">
-        <ul class="nav nav-tabs mb-3 justify-content-center" id="menuTabs" role="tablist">
-
-          <li class="nav-items" role="presentation">
-            <a class="nav-link" id="view-all-tab" data-bs-toggle="tab" data-bs-target="#view-all-menu" role="tab" aria-controls="view-all-menu" aria-selected="false">All</a>
-          </li>
-
-          <li class="nav-items" role="presentation">
-            <a class="nav-link active" id="veg-tab" data-bs-toggle="tab" data-bs-target="#veg-menu" role="tab" aria-controls="veg-menu" aria-selected="true">Vegetarian</a>
-          </li>
-
-          <li class="nav-items" role="presentation">
-            <a class="nav-link" id="non-veg-tab" data-bs-toggle="tab" data-bs-target="#non-veg-menu" role="tab" aria-controls="non-veg-menu" aria-selected="false">Non-Vegetarian</a>
-          </li>
-         
-        </ul>
-      </div>
-
-      <div class="tab-content" id="menuTabsContent">
-        <div class="tab-pane fade show active" id="veg-menu" role="tabpanel" aria-labelledby="veg-tab">
-          <div class="container1">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="row mb-4">
-                  <div class="col-md-6">
-                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Pizza Margherita</h3>
-                    <p>Our classic pizza with tomato sauce, mozzarella cheese, and fresh basil.</p>
-                    <p class="text-muted">$12.99</p>
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Pesto Pasta</h3>
-                    <p>Spaghetti with our homemade pesto sauce, cherry tomatoes, and parmesan cheese.</p>
-                    <p class="text-muted">$10.99</p>
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="row mb-4">
-                  <div class="col-md-6">
-                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Grilled Chicken</h3>
-                    <p>Grilled chicken breast with a side of roasted vegetables.</p>
-                    <p class="text-muted">$14.99</p>
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <img src="https://via.placeholder.com/350x200" class="img-fluid" alt="...">
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Beef Burger</h3>
-                    <p>Our classic beef burger with lettuce, tomato, and pickles.</p>
-                    <p class="text-muted">$9.99</p>
-                    <a href="#" class="btn btn-primary">Order Now</a>
-                  </div>
+      <h5>Vegetarian</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="food-item">
+            <img src="./img/pizza.png" alt="Pizza">
+            <div>
+              <h4 class="mb-1">Pizza</h4>
+              <p class="mb-1">A delicious pizza topped with your favorite ingredients.</p>
+              <span class="text-muted">Price: $12</span>
+              <a href="#" class="btn btn-primary">Order Now</a>
+            </div>
+          </div>
+          <div class="food-item">
+            <img src="./img/bugger.jpg" alt="Burger">
+            <div>
+              <h4 class="mb-1">Burger</h4>
+              <p class="mb-1">A juicy burger served with crispy fries.</p>
+              <span class="text-muted">Price: $8</span>
+              <a href="#" class="btn btn-primary">Order Now</a>
             </div>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="food-item">
+            <img src="./img/sagg.png" alt="Salad">
+            <div>
+              <h4 class="mb-1">Salad</h4>
+              <p class="mb-1">A fresh and healthy salad with a variety of veggies.</p>
+              <span class="text-muted">Price: $6</span>
+              <a href="#" class="btn btn-primary">Order Now</a>
+            </div>
+          </div>
+          <div class="food-item">
+            <img src="./img/bugger.jpg" alt="Burger">
+            <div>
+              <h4 class="mb-1">Burger</h4>
+              <p class="mb-1">A juicy burger served with crispy fries.</p>
+              <span class="text-muted">Price: $8</span>
+              <a href="#" class="btn btn-primary">Order Now</a>
+            </div>
+          </div>
+        </div>
+          <!-- Add more food items here -->
+        </div>
       </div>
-          
-      
-      
-      
+      <!-- non-vegeatrain -->
+      <div class="container">
+        <h5>non-Vegetarian</h5>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="food-item">
+              <img src="./img/chicken.png" alt="Chicken">
+              <div>
+                <h4 class="mb-1">chicken</h4>
+                <p class="mb-1">A delicious chicken topped with your favorite ingredients.</p>
+                <span class="text-muted">Price: $12</span>
+                <a href="#" class="btn btn-primary">Order Now</a>
+              </div>
+            </div>
+            <div class="food-item">
+              <img src="./img/bugger.jpg" alt="Burger">
+              <div>
+                <h4 class="mb-1">Beef Burger</h4>
+                <p class="mb-1">A juicy burger served with crispy fries.</p>
+                <span class="text-muted">Price: $8</span>
+                <a href="#" class="btn btn-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="food-item">
+              <img src="./img/sagg.png" alt="Salad">
+              <div>
+                <h4 class="mb-1">Salad</h4>
+                <p class="mb-1">A fresh and healthy salad with a variety of veggies.</p>
+                <span class="text-muted">Price: $6</span>
+                <a href="#" class="btn btn-primary">Order Now</a>
+              </div>
+            </div>
+            <div class="food-item">
+              <img src="./img/bugger.jpg" alt="Burger">
+              <div>
+                <h4 class="mb-1">Burger</h4>
+                <p class="mb-1">A juicy burger served with crispy fries.</p>
+                <span class="text-muted">Price: $8</span>
+                <a href="#" class="btn btn-primary">Order Now</a>
+              </div>
+            </div>
+          </div>
+            <!-- Add more food items here -->
+          </div>
+        </div>
+        <!-- other food item -->
+        <h5>Other items</h5>
+        <div class="container">
+          <h5>non-Vegetarian</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="food-item">
+                <img src="./img/chicken.png" alt="Chicken">
+                <div>
+                  <h4 class="mb-1">chicken</h4>
+                  <p class="mb-1">A delicious chicken topped with your favorite ingredients.</p>
+                  <span class="text-muted">Price: $12</span>
+                  <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="./img/bugger.jpg" alt="Burger">
+                <div>
+                  <h4 class="mb-1">Beef Burger</h4>
+                  <p class="mb-1">A juicy burger served with crispy fries.</p>
+                  <span class="text-muted">Price: $8</span>
+                  <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="food-item">
+                <img src="./img/sagg.png" alt="Salad">
+                <div>
+                  <h4 class="mb-1">Salad</h4>
+                  <p class="mb-1">A fresh and healthy salad with a variety of veggies.</p>
+                  <span class="text-muted">Price: $6</span>
+                  <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+              </div>
+              <div class="food-item">
+                <img src="./img/bugger.jpg" alt="Burger">
+                <div>
+                  <h4 class="mb-1">Burger</h4>
+                  <p class="mb-1">A juicy burger served with crispy fries.</p>
+                  <span class="text-muted">Price: $8</span>
+                  <a href="#" class="btn btn-primary">Order Now</a>
+                </div>
+              </div>
+            </div>
+              <!-- Add more food items here -->
+            </div>
+          </div>
+
     </div>
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (optional if you need any JavaScript functionality) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   -->
+  
+
+  
+
+   
+    
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
       <footer>
       <div class="grid-container">
@@ -228,11 +308,9 @@
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
         </div>  
-    </div>
+      </div>
     
-    </footer>
+    </footer> 
       
   </body>
-
-
 </html>
