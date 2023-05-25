@@ -44,10 +44,10 @@ export const signup = async (name, email, password, passwordConfirm) => {
                 email,
                 password,
                 passwordConfirm,
-            },
+            }, 
         })
         if(res.data.status === 'success'){
-            showAlert('success', "Accounted created successfully")
+            window.alert("Accounted created successfully")
             window.setTimeout(()=>{
                 location.assign('/')
             }, 1500)
@@ -58,15 +58,15 @@ export const signup = async (name, email, password, passwordConfirm) => {
             typeof err.response !== 'undefined'?
             err.response.data.message
             :err.message
-        showAlert('error', 'Error:Passwords are not same!', message)
+        window.alert( 'Error:Passwords are not same!', message)
         
     }
 }
 
-console.log("bdsskh")
- 
-document.querySelector('.needs-validation').addEventListener('submit', (e) =>{
+  
+document.querySelector('form.needs-validation').addEventListener('submit', (e) =>{
     e.preventDefault()
+
     const name = document.getElementById('name').value
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value

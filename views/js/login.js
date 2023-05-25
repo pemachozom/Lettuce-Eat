@@ -4,7 +4,7 @@ const login = async (email, password) => {
     try {
         const res = await axios({
             method: 'POST',
-            url: 'http://localhost:4001/api/v1/users/login',
+            url: 'http://localhost:4000/api/v1/users/login',
             data: {
                 email,
                 password
@@ -12,7 +12,7 @@ const login = async (email, password) => {
         })
         console.log(res)
         if (res.data.status == 'success') {
-            showAlert('success', 'Logged in successfully')
+            window.alert('Logged in successfully')
             window.setTimeout(() => {
                 location.assign('/')
             }, 1500)
@@ -26,7 +26,7 @@ const login = async (email, password) => {
             typeof err.response !== 'undefined'
             ? err.response.data.message
             :err.message
-        showAlert('error', 'Error: Incorrect email or password', message)
+        window.alert( 'Error: Incorrect email or password', message)
     }
 }
 
@@ -34,5 +34,7 @@ document.querySelector('.form').addEventListener('submit', (e) => {
     e.preventDefault()
     const email = document.getElementById('email').value
     const password = document.getElementById('password').value
+    console.log(email)
+    console.log(password)
     login(email, password)
 })
