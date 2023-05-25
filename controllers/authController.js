@@ -1,6 +1,9 @@
 const User = require('./../models/userModels')
 const jwt = require('jsonwebtoken')
 const AppError = require('./../utils/appError')
+const { promisify } = require('util');
+const multer = require('multer')
+
 
 const signToken = (id) => {
     return jwt.sign({id}, process.env.JWT_SECRET, {
@@ -76,3 +79,78 @@ exports.login = async (req, res, next) => {
 
     }
 }
+
+
+
+
+exports.protect = async(req,res,next)=>{
+    try{
+        //1) getting token and check of its there
+        let token 
+        if(
+            req.headers.authorization &&
+            req.headers.authorization.startsWith('Bearer')
+        ){
+            token = req.headers.authorization.split(' ')[1]
+            
+        }else if(req.cookies.jwt){
+            token = req.cookies.jwt
+
+        }
+        if(!token){
+            return next(
+                new AppError('You are not logged in! Please log in to get access.', 401),
+            )
+        }
+
+
+        // 2) Verificatin token
+        const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
+        console.log(decoded)
+
+
+        // 3) check if user still exits
+        const freshUser = await User.findById(decoded.id)
+        if(!freshUser){
+            return next(
+                new AppError('the user belonging to this token no longer exist',401)
+            )
+        }
+        //Grant access to protected route
+        req.user =freshUser
+        next()
+
+
+    }catch(err){
+        res.status(500).json({error:err.message})
+    }
+}
+
+
+
+
+// upload image
+const multerStorage = multer.diskStorage({
+    destination:(req,file,cb)=>{
+        cb(null,'views/img/product')
+    },
+    filename:(req,file,cb)=>{
+        //user-id-currenttimestamp.extention
+        var obj = req.user.id;
+        const ext = file.mimetype.split('/')[1]
+        cb(null,`product-${obj}-${Date.now()}.${ext}`)
+    }
+})
+const multerFilter = (req,file,cb)=>{
+    if(file.mimetype.startsWith('image')){
+        cb(null,true)
+    }else{
+        cb(new AppError('Not an image! please upload only image',400),false)
+    }
+}
+
+const upload = multer({
+    storage:multerStorage,
+    fileFilter:multerFilter,
+})
+exports.uploadProductPhoto = upload.single('product')
