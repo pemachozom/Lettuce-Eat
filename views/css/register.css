@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'Inter';
-    src: url('fonts/Inter-Regular.woff2') format('woff2'),
-        url('fonts/Inter-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* for header */
 .navbar-brand img {
     max-height: 50px;
@@ -142,4 +134,24 @@ form {
     padding-left: 20px;
     background-color: #FFE7CC;
 }
+
+/* Add custom CSS styles for responsive navigation */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 0;
+        font-size: 1.5rem; /* Adjust the font size as needed */
+    }
+}
+
+
 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user profile</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="./css/userprofile.css">
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Dashboard</label>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">QR Update</a></li>
+        </ul>
+    </nav>
+    <div class="profile-container">
+        <div class="">
+            <img src="./img/userpro/userim.png" alt="Profile Picture" class="profile-picture">
+        </div>
+    </div>
+    <div class="container p-2">
+        <form class="needs-validation mt-6" novalidate name="myForm" onsubmit="return validateForm()">
+            <div class="row">
+                <div class="col text-center mb-4">
+                  <h1>User Details</h1>
+                </div>
+              </div>
+              <div class="form-group mt-4 mx-5">
+                <label>Full Name</label>
+                <input type="text" class="form-control" placeholder="Deepak Ghalley" name="fullName" required>
+            </div>
+            <div class="form-group mt-4 mx-5">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="dghaley@gmail.com" name="email" required>
+            </div>
+            <div class="form-group mt-4 mx-5">
+                <label>Contact Number</label>
+                <input type="number" class="form-control" placeholder="77656625" name="contactNumber" required>
+            </div>
+            <div class="form-group mx-5">
+                <button type="update" class="btn mybtn mb-5 py-3 btn-block"><a
+                        href="#"></a>Save Changes</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+          var fullName = document.forms["myForm"]["fullName"].value;
+          var email = document.forms["myForm"]["email"].value;
+          var contactNumber = document.forms["myForm"]["contactNumber"].value;
+    
+          // Validate full name (required field)
+          if (fullName === "") {
+            alert("Please enter your full name.");
+            return false;
+          }
+    
+          // Validate email (required field)
+          if (email === "") {
+            alert("Please enter your email.");
+            return false;
+          }
+    
+          // Validate email format using regular expression
+          var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+          }
+    
+          // Validate contact number (required field and length of 8 digits)
+          if (contactNumber === "") {
+            alert("Please enter your contact number.");
+            return false;
+          }
+          if (contactNumber.length !== 8 || isNaN(contactNumber)) {
+            alert("Contact number should be exactly 8 digits long.");
+            return false;
+          }
+        }
+      </script>
+</body>
+
+</html>
