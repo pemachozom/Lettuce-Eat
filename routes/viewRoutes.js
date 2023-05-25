@@ -5,6 +5,7 @@ const viewsController = require('./../controllers/viewController')
 router.get('/', viewsController.getHome)
 router.get('/login', viewsController.getLoginForm)
 router.get('/signup', viewsController.getSignupForm)
+router.get('/loggedin', viewsController.getLoggedinForm)
 
 module.exports = router
 

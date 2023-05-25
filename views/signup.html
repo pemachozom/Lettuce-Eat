@@ -67,7 +67,7 @@
 <body>
     <div class="container pt-4">
         <h1 class="text-center"><strong>Register to Continue</strong></h1>
-        <form class="needs-validation mt-5  " novalidate>
+        <form class="form form--signup">
             <div class="form-group mt-4 mx-5">
                 <input type="text" class="form-control rounded-pill" id="name" placeholder="Name" required = 'required' />
                 <div class="invalid-feedback">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="form-group mx-5">
-                <input type="password" class="form-control rounded-pill" id="confirm-password"
+                <input type="password" class="form-control rounded-pill" id="password-confirm"
                     placeholder="Confirm password" data-match="#password" data-match-error="Passwords do not match"
                     required = "required" />
                 <div class="invalid-feedback">
@@ -97,8 +97,7 @@
                 </div>
             </div>
             <div class="form-group mx-5">
-                <button type="submit" class="btn mybtn mb-5 py-3 btn-block rounded-pill"><a
-                        href="#">Sign-Up</a> </button>
+                <button type="submit" class="btn mybtn mb-5 py-3 btn-block rounded-pill">Sign-Up </button>
             </div>
         </form>
     </div>
@@ -121,35 +120,7 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Add custom validation messages
-        var passwordInput = document.getElementById('password');
-        passwordInput.addEventListener('invalid', function (event) {
-            event.target.setCustomValidity('Password must be at least 8 characters long.');
-        });
-        passwordInput.addEventListener('input', function (event) {
-            event.target.setCustomValidity('');
-        });
-
-
-        // Enable data-match validation for the confirm password field
-        var confirmInput = document.getElementById('confirm-password');
-        
-        // Handle form submission
-        var form = document.querySelector('form');
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            if (confirmInput.value != password.value) {
-                window.alert('Passwords do not match')
-            }
-            form.classList.add('was-validated');
-        });
-    </script>
-    <script type="module" src="js/signup.js"></script>
+    <script type="module" src="./js/signup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 </body>
 

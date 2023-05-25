@@ -15,3 +15,9 @@ exports.getSignupForm = (req, res) => {
 exports.getHome = (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'views' , 'index.html'))
 }
+
+/*home page after logging in*/
+exports.getLoggedinForm = (req, res) => {
+    res.sendFile(path.join(__dirname, '../', 'views', 'dashboard.html'))
+
+}

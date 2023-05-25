@@ -44,18 +44,18 @@
                 <div class="col-lg-7 text-center py-5">
                     
                     <h2>Login to your account </h2>
-                    <form >
+                    <form class="form">
                         <div class=" form-row py-3 pt-5 ">
                             <div class="offset-1 col-lg-10">
                                 <i class="fa-regular fa-circle-user fs-2x icon"></i>
-                                <input type="text" class="inp px-3" placeholder="Email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="required">
+                                <input type="email" id="email" class="inp px-3" placeholder="Email"   required="required">
                                 
                             </div>
                         </div>
                         <div class="form-row py-3  ">
                             <div class="offset-1 col-lg-10">
                                 <i class="fa-solid fa-unlock fa-sm icon2"></i> 
-                                <input type="password" class="inp px-3" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,20}$" required="required">
+                                <input type="password" class="inp px-3" placeholder="Password"  required="required" id="password">
                                   <!-- (?=.*[a-z]) - At least one lowercase letter(a - z).
 
                                     (?=.*[A-Z]) - At least one uppercase letter(A - Z).
@@ -107,7 +107,7 @@
     </footer>
       
   </body>
-   <script type="module" src="js/login.js"></script>
+   <script type="module" src="./js/login.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 
 
