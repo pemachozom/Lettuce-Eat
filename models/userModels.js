@@ -46,14 +46,19 @@ const userSchema = new mongoose.Schema({
     },
 })
 
+// encrypt the password 
 userSchema.pre('save', async function (next) {
+    // Only run this  funcntion if password was actually modified
     if (!this.isModified('password')) return next()
 
+    // Hash the password with cost of 12 (cost parameter -> btw 4 to 31)
     this.password = await bcrypt.hash(this.password, 12)
+    // Delete passwordConfirm field
     this.passwordConfirm = undefined
     next()
 })
 
+// Add Hashing to the Update of Password
 userSchema.pre('findOneAndUpdate', async function (next) {
     const update = this.getUpdate();
     if(
@@ -61,6 +66,7 @@ userSchema.pre('findOneAndUpdate', async function (next) {
         update.password !== undefined &&
         update.password == update.passwordConfirm) {
         
+        // Hash the password with cost 12
         this.getUpdate().password = await bcrypt.hash(update.password, 12)
 
         update.passwordConfirm = undefined
@@ -79,3 +85,6 @@ userSchema.methods.correctPassword = async function (
 
 const User = mongoose.model('User', userSchema)
 module.exports = User
+
+
+

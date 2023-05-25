@@ -56,7 +56,11 @@ border-radius: 50px;
 }
 
 .icon{
+<<<<<<< HEAD
  position: absolute;
+=======
+    position: absolute;
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e
     background:#FFE7CC ;
     margin-right: 18px;
     margin-top: 1px;
@@ -68,6 +72,7 @@ border-radius: 50px;
 }
 .icon2{
     position: absolute;
+<<<<<<< HEAD
        background:#FFE7CC ;
        margin-right: 18px;
        margin-top: 10px;
@@ -75,10 +80,20 @@ border-radius: 50px;
        width: 44px;
        padding-top: 12px;
        margin-left: 10px;
+=======
+    background:#FFE7CC ;
+    margin-right: 18px;
+    margin-top: 10px;
+    height: 20px;
+    width: 44px;
+    padding-top: 12px;
+    margin-left: 10px;
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e
       
    }
 .title {
     font-family: 'Inter';
+<<<<<<< HEAD
 font-style: normal;
 font-weight: 700;
 font-size: 25px;
@@ -88,11 +103,22 @@ text-align: center;
   
 width: 109px;
 height: 93px;
+=======
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+.logo{
+    width: 109px;
+    height: 93px;
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e
 }
 .col-2{
     flex-grow: 2;
 } 
 
+<<<<<<< HEAD
   .navbar-brand img {
     max-height: 50px;
   }
@@ -108,6 +134,23 @@ height: 93px;
   .navbar-brand{
     background-color: #F3B989;
   }
+=======
+.navbar-brand img {
+    max-height: 50px;
+}
+  
+@media (max-width: 768px) {
+.navbar-brand img {
+    max-height: 40px;
+}
+}
+header{
+    background-color: #F3B989;
+}
+.navbar-brand{
+    background-color: #F3B989;
+}
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e
 .navbar-toggler{
     background-color: #F3B989;
 }
@@ -125,16 +168,25 @@ height: 93px;
 }
 
    /* footer */
+<<<<<<< HEAD
    footer {
     height: 150px;
     background-color: #F8CBA6;
   }
   .grid-container {
+=======
+footer {
+    height: 150px;
+    background-color: #F8CBA6;
+}
+.grid-container {
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 10px;
     background-color: #F8CBA6;
     padding: 10px;
+<<<<<<< HEAD
   }
   
   .grid-container > div {
@@ -169,3 +221,41 @@ height: 93px;
   .item3 i{
     background-color: #F8CBA6;
   }
+=======
+}
+  
+.grid-container > div {
+    background-color: #F8CBA6;
+    padding: 20px 0;
+    font-size: 16px;
+}
+  
+.item1 {
+    grid-area: 1 / 1;
+    text-align: center;
+    font-size: 16px;
+}
+.item1 h5{
+    background-color: #F8CBA6;  
+}
+.item1 p{
+    background-color: #F8CBA6;
+}
+
+.item3 {
+    grid-area: 1 / 3 ;
+    text-align: center;  
+}
+
+.item3 a {
+    margin: 20px;
+    background-color: #F8CBA6;
+}
+.item3 h5{
+    background-color: #F8CBA6;
+}
+
+.item3 i{
+    background-color: #F8CBA6;
+}
+>>>>>>> c967ca721759ab4e459a6a987cb87bf36d55345e

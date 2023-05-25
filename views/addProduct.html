@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9107ad173a.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/addProduct.css">
+    <title>Admin</title>
+</head>
+<header>
+    <h2>Dashboard</h2>
+    <div class="navbar">
+        <nav>
+        
+                <li>
+                    <a href="#">Home</a>
+                    <a href="#">Products</a>
+                    <a href="#">Orders</a>
+                    <a href="#">Users</a>
+                    <a href="#">QR updates</a>
+                </li>
+            
+        </nav>
+    </div>
+    <i class="fa-regular fa-user"></i>
+</header>
+<body>
+     <div class="container">
+        <h2>Add Product</h2>
+        <div class="inputs">
+
+            <div class="inputbox">
+                <input type="text" required><br>
+                <span for="#" >Enter Product Name: </span><br>
+            </div>
+            
+            <div class="inputbox">
+                <input type="text" required><br>
+                <span for="#">Enter Product Price: </span><br>
+            </div>
+             
+            <div class="inputbox">
+                <input type="text" required><br>
+                <span for="#">Enter Product Category: </span><br>
+            </div>
+            <label for="#">Add Photo</label>
+            <input type="file" class="file" accept=".jpg,.jpeg,.png">
+ 
+            <button><a href="#">Add Product</a></button>
+        </div>
+     </div>
+
+     
+</body>
+
+<footer>
+
+</footer>
+<script>
+    document.querySelector('.inputs').addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+</script>
+</html>
