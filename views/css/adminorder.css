@@ -1,0 +1,26 @@
+/* headers */
+
+.navbar{
+    height: 90px;
+}
+
+.navbar-custom {
+    background-color: #F8CBA6; 
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .fas {
+    margin-right: 1rem;
+    color: #000000 !important; 
+}
+
+.navbar-nav{
+    margin-left: 12rem;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        margin-left: 0;
+    }
+}
