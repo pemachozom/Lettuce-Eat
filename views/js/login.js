@@ -10,6 +10,7 @@ const login = async (email, password) => {
                 password
             },
         })
+
         console.log(res)
         if (res.data.status == 'success') {
             window.alert('Logged in successfully')
@@ -21,6 +22,7 @@ const login = async (email, password) => {
             document.cookie = ' token = ' + JSON.stringify(obj)
             // console.log(obj)
         }
+        
     } catch (err) {
         let message = 
             typeof err.response !== 'undefined'
