@@ -24,3 +24,25 @@
         margin-left: 0;
     }
 }
+
+/* container */
+.table{
+    margin-top: 69px;
+    background-color: #FFE7CC;
+}
+
+.table-bordered {
+    border: 1px solid black;
+}
+
+/* button */
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+body{
+    background: #F5F5F5;
+}
+
