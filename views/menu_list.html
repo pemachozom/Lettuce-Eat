@@ -22,40 +22,60 @@
 
 }
 .navbar{
-    background-color: #F3B989;
-    background: #F3B989;
+  background-color: #F3B989;
+  background: #F3B989;
+  
 }
 .navbar-brand img {
-    max-height: 50px;
-    max-width: 50px;
-   margin-left: 50px;
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 40px;
   }
-  
-  @media (max-width: 768px) {
-    .navbar-brand img {
-      max-height: 40px;
-    }
-  }
-  header{
-    background-color: #F3B989;
-  }
-  .navbar-brand{
-    background-color: #F3B989;
-  }
+}
+header{
+  background-color: #F3B989;
+}
+.navbar-brand{
+  background-color: #F3B989;
+}
 .navbar-toggler{
-    background-color: #F3B989;
+  background-color: #F3B989;
 }
 .collapse{
-    background-color: #F3B989;
+  background-color: #F3B989;
 }
 .navbar-nav{
-    background-color: #F3B989;
+  background-color: #F3B989;
+  padding-right: 20px;
 }
-.nav-item {
-    background-color: #F3B989;
+.navbar-item {
+  background-color: #F3B989;
+  margin-right: 20px;
+  padding-left: 10px;
 }
 .navbar-toggler-icon{
-    background-color: #F3B989;
+  background-color: #F3B989;
+}/*nav icon*/
+.navbar-item a{
+  background-color: #F3B989;
+
+}
+.fa-solid{
+  background-color: #F3B989;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+  margin-top: 10px;
+}
+.fa-regular {
+  background-color: #F3B989;
+  text-align: center;
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
 }
    /* footer */
    footer {
@@ -203,12 +223,30 @@ margin-top: 10px;
   </style>
 
 <header>
-    <nav class="navbar navbar-expand-lg ">
-     <a class="navbar-brand " href="#"><img src="./img/logo.png" alt="Logo" class="rounded-circle"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  
+<nav class="navbar navbar-expand-sm  fixed-top">
+
+  <a class="navbar-brand " href="#"><img src="./img/logo.png" alt="Logo" class="rounded-circle"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+  <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+          <li class="navbar-item active">
+              <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="navbar-item">
+              <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="navbar-item ">
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+         
+          </li>
+          <li class="navbar-item ">
+            <i class="fa-regular fa-circle-user"></i>
+          </li>
+      </ul>
+  </div>
 
 </nav>
 
@@ -356,7 +394,9 @@ margin-top: 10px;
   </div>      
 
 
-     
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        
+  </script>    
 
 >>>>>>> sprint1-dawa
 </body>
