@@ -21,3 +21,9 @@ exports.getLoggedinForm = (req, res) => {
     res.sendFile(path.join(__dirname, '../', 'views', 'dashboard.html'))
 
 }
+
+
+exports.getProfile= (req, res) => {
+    res.sendFile(path.join(__dirname,'../','views','myprofilepage.html'))
+}
+

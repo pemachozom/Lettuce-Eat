@@ -25,7 +25,7 @@ if (document.cookie) {
 var el = document.querySelector('.nav.nav--user')
 if(obj._id) {
     el.innerHTML =
-    '<a id= "logout" class="nav__el">Log out</a> <a href="/me" class="nav__el"><img src="../img/'+
+    '<a id= "logout" class="nav__el">Log out</a> <a href="/me" class="nav__el"><img src="../img/users/'+
     obj.photo+
     ' " alt="Phot0 of ${user.name}" class="nav__user-img" /><span>' +
     obj.name+
