@@ -43,31 +43,38 @@
     <link rel="stylesheet" href="./css/signup.css">
 
 </head>
-<header>
-    <nav class="navbar navbar-expand-lg ">
-        <a class="navbar-brand " href="#"><img src="./img/logo.png" alt="Logo" class="rounded-circle"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-</header>
 
 <body>
+    <header>
+        <a href="#" class="logo">
+      
+        <span class ="spancl" style="color:#0bca54">
+          <div class="spanc2">
+            <img src="css/logo.jpg" alt="mainlogo" class="logoim">
+            <div>
+              <b>Lettuce</b>
+            </div>
+          </div>
+          <div style="color:#FD8F0E">
+
+            Eat
+          </div>
+        
+        </span>
+        </a>
+        <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </header>
     <div class="container pt-4">
-        <h1 class="text-center"><strong>Register to Continue</strong></h1>
+        
         <form class="form form--signup">
+            <h1 style="margin-bottom: 30px;"><center>Register</center></h1>
             <div class="form-group mt-4 mx-5">
                 <input type="text" class="form-control rounded-pill" id="name" placeholder="Name" required = 'required' />
                 <div class="invalid-feedback">
@@ -102,24 +109,7 @@
         </form>
     </div>
 
-    <footer class="footer">
-        <div class="container1">
-            <div class="row1 d-flex justify-content-between">
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> lettuceeat@example.com</p>
-                    <p><i class="fas fa-phone"></i> 17772222</p>
-                </div>
-                <div class="follow mt-2">
-                    <h5><strong>Follow Us</strong></h5>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+   
     <script type="module" src="./js/signup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 </body>

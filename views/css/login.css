@@ -1,10 +1,92 @@
+
 *{
-    padding :0;
+    padding:0;
     margin: 0;
     box-sizing: border-box;
-    background: #FFFBEB;
-
-}
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+  
+  }
+  
+  header{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+    background-color: #F8CBA6;
+  }
+  body{
+    background-color:   #f8ead8
+  }
+  
+  
+  .spancl{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+  .spanc2{
+    display: flex;
+    align-items: center;
+    
+  }
+  .logoim{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .logo{
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .55s ease;
+  }
+  
+  .logo:hover{
+    transform: translateY(-5px);
+  }
+  
+  .navlist{
+    display: flex;
+  }
+  
+  .navlist a{
+    color: black;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 550;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+    text-decoration: none;
+  }
+  
+  
+  .navlist a:hover{
+    border-bottom: 2px solid white;
+    color: #FD8F0E;
+  }
+  
+  #menu-icon{
+    color: black;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+  }
+  
+  section{
+    padding: 0 9%;
+  }
 .navbar{
     background-color: #F3B989;
     background: #F3B989;
@@ -15,10 +97,10 @@
 
 .container{
 padding-left: 18%;
-margin-top: 20px;
+margin-top: 150px;
 }
 .row{
-    background: #F3B989;
+    background: #F8CBA6;
     border-radius: 0;
     box-shadow: 12px 12px 22px;
     width: 80%;
@@ -46,7 +128,7 @@ margin-top: 20px;
 }
 .btn1{
   
-width: 70%;
+width: 80%;
 height: 40px;
 left: 764px;
 top: 648px;
@@ -97,31 +179,12 @@ border-radius: 50px;
 }
   
 @media (max-width: 768px) {
-.navbar-brand img {
-    max-height: 40px;
+    .navbar-brand img {
+        max-height: 40px;
+    }
 }
-}
-header{
-    background-color: #F3B989;
-}
-.navbar-brand{
-    background-color: #F3B989;
-}
-.navbar-toggler{
-    background-color: #F3B989;
-}
-.collapse{
-    background-color: #F3B989;
-}
-.navbar-nav{
-    background-color: #F3B989;
-}
-.nav-item {
-    background-color: #F3B989;
-}
-.navbar-toggler-icon{
-    background-color: #F3B989;
-}
+
+
 
    /* footer */
 footer {
