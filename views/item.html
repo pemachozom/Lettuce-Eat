@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminOrder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/item.css">
+</head>
+<style>
+    .alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.alert--success {
+    background-color: pink;
+}
+
+.alert--error {
+    background-color: maroon;
+}
+</style>
+<header>
+   
+    <div class="navbar">
+         <h2>Dashboard</h2>
+        <nav>
+        
+                <li>
+                   
+                    <a href="/addproduct">Products</a>
+                    <a href="/adminorder">Orders</a>
+                    <a href="/userdisplay">Users</a>
+                    <a href="/">LogOut</a>
+                    
+                    
+                </li>
+            
+        </nav>
+    </div>
+   
+</header>
+<body>
+    <div class="cards-wrapper col-lg-12">
+    <div class="card">
+        <div class="row table_body">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="./js/adminorder.js"></script>
+    <script>
+        // import showAlert from "./alert.js"
+        const hideAlert = () => {
+    const el = document.querySelector('.alert')
+    if (el) el.parentElement.removeChild(el)
+}
+
+//type is 'success' or 'error'
+        const showAlert = (type, msg) => {
+    hideAlert()
+    const markup = `<div class="alert alert--${type}">${msg}</div>`;
+    document.querySelector('body').insertAdjacentHTML('afterbegin', markup)
+    window.setTimeout(hideAlert, 3000)
+}
+        
+        const acceptRequest = async(id) =>{
+            const response = await axios({
+                method:"PATCH",
+                url:`http://localhost:4003/api/v1/orders/${id}`,
+                data:{
+                    status:"accepted"
+                }
+            })
+            console.log(response.data)
+            if(response.data.status=="success"){
+                showAlert("success","Request accepted")
+                setTimeout(() => {
+                    window.location.reload(true)
+                }, 3000);
+            }
+        }
+        const doneRequest = async(id) =>{
+            // alert(id)
+            const response = await axios({
+                method:"PATCH",
+                url:`http://localhost:4003/api/v1/orders/${id}`,
+                data:{
+                    status:"done"
+                }
+            })
+            console.log(response.data)
+            if(response.data.status=="success"){
+                showAlert("success","Requetst is completed")
+                setTimeout(() => {
+                    window.location.reload(true)
+                }, 3000);
+            }
+        }
+        const deleteOrderfromDataBase=async(id)=>{
+            // http://localhost:4003/api/v1/orders/6489a040630d0eb009837326
+            const response = await axios.delete(`http://localhost:4003/api/v1/orders/${id}`)
+            if(response.data.status=="success"){
+                showAlert("success","successfully deleted")
+                setTimeout(() => {
+                    window.location.reload(true)
+                }, 3000);
+            }
+
+        }
+    </script>
+</body>
+</html>

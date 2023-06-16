@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9107ad173a.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./css/addProduct.css">
+    <title>Admin</title>
+</head>
+<header>
+ 
+    <div class="navbar">
+         <h2>Dashboard</h2>
+        <nav>
+        
+                <li>
+                    <a href="/addproduct">Products</a>
+                    <a href="/adminorder">Orders</a>
+                    <a href="/userdisplay">Users</a>
+                    <a href="/">LogOut</a>
+                </li>
+            
+        </nav>
+    </div>
+   
+</header>
+<body>
+     <div class="container">
+        <h2>Add Product</h2>
+        <div class="inputs">
+
+            <div class="inputbox">
+                <input type="text" id="productName" required><br>
+                <span for="#" >Enter Product Name: </span><br>
+            </div>
+            
+            <div class="inputbox">
+                <input type="number" id="productPrice" required><br>
+                <span for="#">Enter Product Price: </span><br>
+            </div>
+             
+            <div class="inputbox">
+                <input type="text" id="catagory" required><br>
+                <span for="#">Enter Product Category: </span><br>
+            </div>
+            <label for="#">Add Photo</label>
+            <input type="file" class="file" id="product" name="product" accept=".jpg,.jpeg,.png">
+ 
+            <button id="addProductButton"><a href="#">Add Product</a></button>
+        </div>
+     </div>
+
+     
+</body>
+
+<footer>
+
+</footer>
+<script>
+    document.querySelector('.inputs').addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script type="module" src="./js/addproduct.js"></script>
+</html>

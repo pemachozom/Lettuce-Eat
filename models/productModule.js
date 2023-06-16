@@ -17,12 +17,12 @@ const productSchema =new mongoose.Schema({
         type:String,
         default:"default.jpg",
         require:[true,"please provide image"]
-    },
-    ownerData:{
-        type:mongoose.Schema.ObjectId,
-        required:true,
-        ref:"User"
     }
+    // ownerData:{
+    //     type:mongoose.Schema.ObjectId,
+    //     required:true,
+    //     ref:"User"
+    // }
 
 })
 

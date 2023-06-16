@@ -1,0 +1,308 @@
+/* *{
+    background-color: #FFFBEB;
+    padding: 0;
+    font-family: 'Open Sans';
+
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 152px;
+    background-color: #F8CBA6;
+    font-family: 'Open Sans';
+    left: 0px;
+    top: 0px;
+}
+h2{
+    font-weight: 400;
+    font-size: 36px;
+    background-color: #F8CBA6;
+    position: relative;
+    top: 25px;
+    left: 50px;
+    width: 4cm;
+
+}
+.navbar{
+    height: 1cm;
+ }
+ 
+.navbar li{
+    list-style-type: none;
+    background-color: #F8CBA6;
+
+
+}
+
+.navbar a{
+ 
+    text-decoration: none;
+    padding: 15px;
+    background-color: #F8CBA6;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+    position: relative;
+    left: 350px;
+    bottom: 48px;
+    
+ }
+
+header i {
+    position: relative;
+    left: 1000px;
+    bottom: 80px;
+    font-size: 35px;
+    background-color: #F8CBA6;
+} */
+
+body {
+  background-color: #FFFBEB;
+}
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8CBA6;
+    /* margin-bottom: 2%; */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    margin: 0 10px;
+}
+
+header i {
+    font-size: 35px;
+    background-color: #F8CBA6;
+}
+
+h2 {
+  margin-right: 40%;
+}
+
+
+.container{
+    align-items: center;
+    /* border: 1px solid black; */
+    position: relative;
+    width: 592px;
+    height: 596px;
+    left: 420px;
+    top: 70px;
+    background: #FFE7CC;
+    overflow: hidden;
+}
+
+.container h2{
+    background-color: #FFE7CC ;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    font-weight: 400;
+    font-size: 33px;
+}
+.container .inputbox{
+    background-color: #FFE7CC ;
+}
+ 
+
+.container input{
+    position: relative;
+    width: 500px;
+    height: 1.5cm;
+    left: 45px;
+    top: 0px;
+    border:none;
+    margin-bottom: 20px;
+    background: transparent;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    /* transform: translateY(-50%); */
+
+
+}
+
+.container span{
+    font-size: 25px;
+    background : transparent;
+    position: relative;
+    left: 48px;
+    bottom: 50px;
+    /* border: 1px solid black; */
+    /* transform: translateY(-50%); */
+    transition: .5s ease;
+    pointer-events: none;
+
+   
+}
+
+/* .inputs.clicked label{
+    bottom: 120px;
+} */
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+    color: black;
+    transform: translateX(30px) translateY(-20px);
+    font-size: 25px;
+    bottom: 110px;
+}
+ 
+/* .file::-webkit-file-upload-button {
+    visibility: hidden;
+    
+  } */
+
+ 
+
+.inputs{
+    background: transparent;
+}
+.inputs .file{
+    /* color: transparent; */
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    left: 100px;
+    top : -20px;
+}
+
+.inputs label{
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600px;
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+}
+/* button {
+    width: 150px;
+    height: 30px;
+    display: block;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+} */
+#addProductButton {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    font-family: 'Open Sans';
+    background: transparent;
+}
+
+
+
+@media (max-width: 1300px){
+    *{
+        padding: 0;
+        left: 0;
+    }
+    header{
+        height:  100px;
+        width: 100%;
+    }
+
+    h2{
+        font-size: 25px;
+        top: 15px;
+    }
+
+    .navbar a{
+        font-size: 20px;
+        padding: 9px;
+        top: -35px;
+    }
+
+    .container{
+        position: relative;
+        right: 300px;
+        width: 500px;
+        height: 500px;
+    }
+
+    .container h2{
+        font-size: 28px;
+    }
+
+    .container span{
+        font-size: 20px;
+        position: relative;
+        bottom: px;
+        
+     }
+
+    .container input {
+        width: 400px;
+        height: 1cm;
+    }
+
+    button {
+        width: 400px;
+        height: 1cm;
+    }
+
+    .inputbox input:valid ~ span,
+    .inputbox input:focus ~ span{
+    color: black;
+    transform: translateX(30px) translateY(-20px);
+    font-size: 20px;
+    bottom: 85px;
+    }
+}
+
+
+
+  .alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.alert--success {
+    background-color: pink;
+}
+
+.alert--error {
+    background-color: maroon;
+}

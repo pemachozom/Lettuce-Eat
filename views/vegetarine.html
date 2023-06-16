@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu_list</title>
+    <!-- this is for font awsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- this link is for the boostrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <!-- <link rel="stylesheet" href="./css/login.css"> -->
+  </head>
+  
+  <style>
+    body{
+      background-color: #FFFBEB;
+    }
+    *{
+    padding :0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #FFFBEB;
+
+}
+.navbar{
+    background-color: #F3B989;
+    background: #F3B989;
+}
+.navbar-brand img {
+    max-height: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      max-height: 40px;
+    }
+  }
+  header{
+    background-color: #F3B989;
+  }
+  .navbar-brand{
+    background-color: #F3B989;
+  }
+  .navbar a{
+    color: #000;
+    margin: 0.5rem;
+    /* padding: 0.5rem; */
+    font-size: 1.5rem;
+}
+#link {
+  margin-left: 20%;
+  /* padding: 0.5rem; */
+  /* margin: 20px 0px 20px 90px; */
+
+}
+.navbar a:hover{
+    color: #F3B989;
+}
+.navbar-toggler{
+    background-color: #F3B989;
+}
+.collapse{
+    background-color: #F3B989;
+}
+.navbar-nav{
+    background-color: #F3B989;
+}
+.nav-item {
+    background-color: #F3B989;
+}
+.navbar-toggler-icon{
+    background-color: #F3B989;
+}
+   /* footer */
+   footer {
+    height: 150px;
+    background-color: #F8CBA6;
+    width: 100%;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: #F8CBA6;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: #F8CBA6;
+    padding: 20px 0;
+    font-size: 16px;
+  }
+  
+  .item1 {
+    grid-area: 1 / 1;
+    text-align: center;
+    font-size: 16px;
+  }
+  .item1 h5{
+    background-color: #F8CBA6;
+  }
+  .item1 p{
+    background-color: #F8CBA6;
+  }
+  .item3 {
+    grid-area: 1 / 3 ;
+    text-align: center;  
+  }
+  
+  .item3 a {
+    margin: 20px;
+    background-color: #F8CBA6;
+  }
+  .item3 h5{
+    background-color: #F8CBA6;
+  }
+  .item3 i{
+    background-color: #F8CBA6;
+  }
+  /* menu list  */
+  .container h4{
+text-align: center;
+
+margin-top: 10px;
+  }
+  .container .row .col{
+    text-align: center;
+  }
+
+  /* vege */
+  .row{
+    padding-left: 20px;
+    text-align: center;
+  }
+  .col-md-4{
+    margin-bottom: 20px;
+  }
+  .food-item img{
+    width: 200px;
+    height: 170px;
+    border-radius: 10px;
+  }
+  .container2{
+    margin-top: 20px;
+  }
+  /* .food-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .food-item .btn {
+    margin-bottom: 0;
+    } */
+    .container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .food-item {
+      width: 300px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col-md-4 .btn {
+      text-align: center;
+        
+    bottom: 0%;
+    }
+     /* fontfor description section  */
+  .smaller-font{
+    font-size: 14px;
+    height: 100px;
+  }
+  .zoom-image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .zoom-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .zoom-image:hover img {
+    transform: scale(1.2);
+  }
+  .alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.6rem 15rem;
+    -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+
+.alert--success {
+    background-color: pink;
+}
+
+.alert--error {
+    background-color: maroon;
+}
+  </style>
+
+<header>
+    <nav class="navbar navbar-expand-lg ">
+      <a class="navbar-brand " href="myprofilepage.html"><img src="./img/logo.png" alt="Logo" class="rounded-circle"></a>
+      <a id="link" href="#">Home</a>
+      <a id="link" href="/about">About</a>
+			<a id="link" href="/">LogOut</a>
+      
+      
+     <button type="button" class="btn position-absolute top-0 end-0" data-toggle="modal" data-target="#exampleModal">
+          <i class="bi bi-cart-fill me-2"></i> 
+      </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+</nav>
+
+</header>
+<body>
+  <div class="container">
+      <h4>Menu_list</h4>
+      <div class="row">
+          <div class="col">
+            <button onclick="handleVegClick()" class="btn">Vegetarian</button>
+            <button onclick="handleNonVegClick()" class="btn">Non-Vegetarian</button>
+          </div>
+      </div>
+      
+      <div class="container2">
+        <div class="row veg-menu-item ">
+        </div>
+        <div class="row Non-veg-menu-item d-none">
+        </div>
+      </div>
+      
+  </div>  
+
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-image">
+          <thead class="modalData">
+            <!-- <div>
+              <input type="text" placeholder="enter JonalNumber">
+            </div> -->
+            <!-- <tr>
+              <th scope="col"></th>
+              <th scope="col">Product</th>
+              <th scope="col">Price</th>
+              <th scope="col">Qty</th>
+              <th scope="col">Total</th>
+              <th scope="col">Actions</th>
+            </tr> -->
+          </thead>
+          <tbody class="tableBody " >
+            <!-- <tr>
+              <td class="w-25">
+                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>Vansasd</td>
+              <td><span>123</span><b>Nu</b></td>
+              <td class="qty"><input type="number" class="form-control" id="input1" value="2"></td>
+              <td><span>123</span><b>Nu</b></td>
+              <td>
+                <a href="#" class="btn  btn-sm">
+                  <i class="fa fa-times"></i>
+                </a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table> 
+        <div class="d-flex justify-content-end">
+          <h5>Total: <span class="price text-success"><span class="grandTotal">0</span> <b>Nu</b></span></h5>
+        </div>
+      </div>
+      <div class="modal-footer border-top-0 d-flex justify-content-between handleDifferentButton">
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" onclick="handleOrderSubmit()" class="btn btn-success">Checkout</button> -->
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+</body>
+
+<footer>
+  <div class="grid-container">
+    <div class="item1">
+              <h5>Email</h5>
+              <p>lettuceeat@gmail.com</p><br>
+              <h5>Contact us</h5>
+              <p>+97577556693 </p>
+      
+    </div>
+  
+    <div class="item3"><h5>FOLLOW US</h5><br>
+     
+          <a  href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>  
+  </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+
+
+ <script >
+    const hideAlert = () => {
+    const el = document.querySelector('.alert')
+    if (el) el.parentElement.removeChild(el)
+}
+
+//type is 'success' or 'error'
+    const showAlert = (type, msg) => {
+    hideAlert()
+    const markup = `<div class="alert alert--${type}">${msg}</div>`;
+    document.querySelector('body').insertAdjacentHTML('afterbegin', markup)
+    window.setTimeout(hideAlert, 3000)
+}
+  
+const getCookie = (name) => {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null; // Cookie not found
+};
+
+  const ProductIDs = [];
+  const orderFood = async(id, category, image, productName, productPrice)=> {
+    // http://localhost:4003/api/v1/orders/orderedList/6482ed3302beb1b835417856
+    const respond = getCookie("token")
+    const tokenObject = JSON.parse(respond);
+    // alert(tokenObject._id)
+    const checkPayment = await axios({
+      method:"GET",
+      url:`http://localhost:4003/api/v1/orders/orderedList/${tokenObject._id}`
+    })
+    // console.log("checkPayment",checkPayment.data.data[checkPayment.data.data.length-1])
+    if((checkPayment.data.data.length >0 && checkPayment.data.data[checkPayment.data.data.length-1].paymentStatus == "payed") || checkPayment.data.data.length == 0){
+      const item = `
+      <tr>
+        <td class="w-25">
+          <img src="./img/product/${image}" class="img-fluid img-thumbnail" alt="Sheep">
+        </td>
+        <td>${productName}</td>
+        <td><span class="productPrice">${productPrice}</span><b>Nu</b></td>
+        <td class="qty"><input onchange="handleQuantityChange(this)" type="number" class="form-control" id="input1" value="2"></td>
+        <td><span class="totalPrice">0</span><b>Nu</b></td>
+        <td>
+          <button onclick="removeSingleItem(this)" class="btn btn-sm">
+            <i class="fa fa-times"></i>
+          </button>
+        </td>
+      </tr>`;
+
+    const tableBody = document.querySelector(".tableBody");
+    tableBody.insertAdjacentHTML("beforeend", item);
+    ProductIDs.push(id);
+
+    }else{
+      // alert("asdsd")
+      showAlert("error","Pay for the previous Order")
+    }
+    
+  }
+
+  function removeSingleItem(button) {
+  var row = button.closest("tr");
+  if (row) {
+    // Get the total price of the removed item
+    var totalPriceElement = row.querySelector(".totalPrice");
+    if (totalPriceElement) {
+      var totalPrice = parseFloat(totalPriceElement.textContent);
+
+      // Subtract the total price from the grand total
+      var grandTotalElement = document.querySelector(".grandTotal");
+      if (grandTotalElement) {
+        var grandTotal = parseFloat(grandTotalElement.textContent);
+        grandTotal -= totalPrice;
+        grandTotalElement.textContent = grandTotal.toFixed(2);
+      }
+    }
+
+    // Remove the row
+    row.remove();
+  }
+}
+
+
+  function handleQuantityChange(input) {
+    var row = input.closest("tr");
+    if (row) {
+      var productPriceElement = row.querySelector(".productPrice");
+      var totalPriceElement = row.querySelector(".totalPrice");
+
+      if (productPriceElement && totalPriceElement) {
+        var productPrice = parseFloat(productPriceElement.textContent);
+        var quantity = parseInt(input.value);
+        var totalPrice = productPrice * quantity;
+
+        totalPriceElement.textContent = totalPrice;
+      }
+
+      // Calculate the new grand total
+      var grandTotal = 0;
+      var totalPriceElements = document.querySelectorAll(".totalPrice");
+      totalPriceElements.forEach(function (element) {
+        grandTotal += parseFloat(element.textContent);
+      });
+
+      // Update the grand total in the modal
+      var grandTotalElement = document.querySelector(".grandTotal");
+      if (grandTotalElement) {
+        grandTotalElement.textContent = grandTotal;
+      }
+    }
+  }
+  const  handleOrderSubmit = async()=>{
+    const total = document.querySelector(".grandTotal").innerHTML
+    // console.log(total)
+    // http://localhost:4003/api/v1/orders/orderedList/6482ed3302beb1b835417856
+    const respond = getCookie("token")
+    console.log(respond)
+    const tokenObject = JSON.parse(respond);
+    console.log(tokenObject._id)
+    const orderRespont = await axios({
+      method:"POST",
+      url:"http://localhost:4003/api/v1/orders",
+      data:{
+        userId:tokenObject._id,
+        total:total,
+        productIds:ProductIDs
+      }
+    })
+    console.log(orderRespont.data)
+    if(orderRespont.data.status === "success"){
+      showAlert("success","successfully requested")
+      setTimeout(() => {
+        window.location.reload(true)
+      }, 3000);
+    }else{
+      showAlert("error","request failed")
+    }
+    
+
+
+    // alert("asmdbj")
+    // console.log(ProductIDs)
+  }
+  const handlePaymentJonal = async(id) =>{
+    // alert(id)
+    const jnrlNo = document.querySelector(".jnrlNo").value
+    if(jnrlNo == ""){
+      alert("enter jnrlNo ")
+      return
+    }
+    // alert(jnrlNo)
+     const response = await axios({
+                method:"PATCH",
+                url:`http://localhost:4003/api/v1/orders/${id}`,
+                data:{
+                    status:"done",
+                    paymentStatus:"payed",
+                    jrnlNo:jnrlNo
+                }
+            })
+            console.log(response.data)
+            if(response.data.status=="success"){
+                showAlert("success","Successfully Made the transaction")
+                setTimeout(() => {
+                window.location.reload(true)
+                }, 3000);
+            }
+  }
+  const handleVegClick =()=>{
+    var vegItems = document.getElementsByClassName("veg-menu-item");
+    var nonVegItems = document.getElementsByClassName("Non-veg-menu-item");
+    for (var i = 0; i < vegItems.length; i++) {
+      vegItems[i].classList.remove("d-none");
+    }
+    for (var i = 0; i < nonVegItems.length; i++) {
+      nonVegItems[i].classList.add("d-none");
+    }
+  }
+  const handleNonVegClick =()=>{
+    var vegItems = document.getElementsByClassName("veg-menu-item");
+    var nonVegItems = document.getElementsByClassName("Non-veg-menu-item");
+    for (var i = 0; i < vegItems.length; i++) {
+      vegItems[i].classList.add("d-none");
+    }
+    for (var i = 0; i < nonVegItems.length; i++) {
+      nonVegItems[i].classList.remove("d-none");
+    }
+  }
+  
+</script>
+ 
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script type="module" src="./js/vegetarine.js"></script>
+  <script type="module" src="./js/cart.js"></script>
+
+</footer> 
+</html>

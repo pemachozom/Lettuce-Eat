@@ -1,0 +1,135 @@
+/* *{
+    background-color: #FFFBEB;
+    padding: 0;
+    font-family: 'Open Sans';
+
+} */
+body {
+  background-color: #FFFBEB;
+}
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8CBA6;
+    margin-bottom: 2%;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+    margin: 0 10px;
+}
+
+header i {
+    font-size: 35px;
+    background-color: #F8CBA6;
+}
+
+h2 {
+  margin-right: 40%;
+}
+
+
+
+
+
+
+.container{
+    align-items: center;
+    /* border: 1px solid black; */
+    position: relative;
+    width: 592px;
+    height: 596px;
+    left: 420px;
+    top: 170px;
+    background: #FFE7CC;
+    overflow: hidden;
+}
+
+.container h2{
+    background-color: #FFE7CC ;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    font-weight: 400;
+    font-size: 33px;
+}
+.container .inputbox{
+    background-color: #FFE7CC ;
+}
+ 
+
+.container input{
+    position: relative;
+    width: 500px;
+    height: 1.5cm;
+    left: 45px;
+    top: 0px;
+    border:none;
+    margin-bottom: 20px;
+    background: transparent;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    /* transform: translateY(-50%); */
+
+
+}
+
+.container span{
+    font-size: 25px;
+    background : transparent;
+    position: relative;
+    left: 48px;
+    bottom: 50px;
+    /* border: 1px solid black; */
+    /* transform: translateY(-50%); */
+    transition: .5s ease;
+    pointer-events: none;
+
+   
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+}

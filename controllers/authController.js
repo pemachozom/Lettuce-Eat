@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const AppError = require('./../utils/appError')
 const { promisify } = require('util');
 const multer = require('multer')
-
+const cookie = require('cookie');
 
 const signToken = (id) => {
     return jwt.sign({id}, process.env.JWT_SECRET, {
@@ -61,11 +61,12 @@ exports.login = async (req, res, next) => {
         const user = await User.findOne({email}).select('+password')
 
         if (!user || !await user.correctPassword(password, user.password)) {
+            res.json({status: 'error',message:"incorrect password or email"})
 
-            return next(new AppError('Incorrect email or password', 401))
+        }else{
+            createSendToken(user,200, res)
         }
         //3) if everyyhing ok, send token to client
-        createSendToken(user,200, res)
 
         //const token = signToken(user._id)
         //res.status(200).json({
@@ -87,14 +88,20 @@ exports.protect = async(req,res,next)=>{
     try{
         //1) getting token and check of its there
         let token 
+        
+
+
         if(
             req.headers.authorization &&
             req.headers.authorization.startsWith('Bearer')
         ){
             token = req.headers.authorization.split(' ')[1]
             
-        }else if(req.cookies.jwt){
-            token = req.cookies.jwt
+        }else if(req.headers.cookie){
+            var cookies = req.headers.cookie
+            var parsedCookies = cookie.parse(cookies);
+            const jwtCookie = parsedCookies.jwt;
+            token = jwtCookie
 
         }
         if(!token){
@@ -154,3 +161,113 @@ const upload = multer({
     fileFilter:multerFilter,
 })
 exports.uploadProductPhoto = upload.single('product')
+
+
+
+
+
+exports.getUserDetails = async(req,res,next)=>{
+    try{
+        //1) getting token and check of its there
+        let token 
+        if(
+            req.headers.authorization &&
+            req.headers.authorization.startsWith('Bearer')
+        ){
+            token = req.headers.authorization.split(' ')[1]
+            
+        }else if(req.headers.cookie){
+            var cookies = req.headers.cookie
+            var parsedCookies = cookie.parse(cookies);
+            const jwtCookie = parsedCookies.jwt;
+            token = jwtCookie
+
+        }
+        if(!token){
+            return next(
+                new AppError('You are not logged in! Please log in to get access.', 401),
+            )
+        }
+
+
+        // 2) Verificatin token
+        const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET)
+        res.status(201).json({
+            status:"success",
+            user : decoded
+        })
+
+
+    }catch(err){
+        res.status(500).json({error:err.message})
+    }
+}
+
+
+exports.updatePassword = async (req,res,next) => {
+    try{
+      const user = await User.findById(req.user._id).select('+password')
+      if(!(await user.correctPassword(req.body.passwordCurrent, user.password))){
+        return next(new AppError('Your current password is wrong',401))
+  
+      }
+      user.password = req.body.password
+      user.passwordConfirm = req.body.passwordConfirm
+      await user.save()
+  
+      createSendToken(user, 200, res)
+  
+    }
+    catch(err){
+      res.status(500).json({error:err.message})
+    }
+}
+const filterObj = (obj, ...allowedFields) => {
+    const newObj = {}
+    Object.keys(obj).forEach((el) => {
+      if (allowedFields.includes(el)) newObj[el] = obj[el]
+    })
+    return newObj
+  }
+
+
+exports.updateMe = async(req,res,next) => {
+    try{
+      if(req.body.password || req.body.passwordConfirm){
+        return next(
+          new AppError(
+            'This route is not for password updates. Please use /updateMyPassword',
+            400,
+          ),
+        )
+      }
+  
+    //   const filteredBody = filterObj(req.body, 'email')
+      if(req.body.photo !== 'undefined'){
+        req.body.photo = req.file.filename
+      }
+  
+    //   console.log(req.user._id)
+    //   var obj = JSON.parse(req.cookies.token)
+      const updatedUser = await User.findByIdAndUpdate(req.user._id, req.body, {
+        new: true,
+        runValidators:true,
+      })
+      createSendToken(updatedUser,200, res)
+    //   res.status(200).json({
+    //         status:'success',
+    //         data: {user:updatedUser}
+    //   })
+    
+  
+    }
+  
+    //   
+  
+    
+    catch (err) {
+      res.status(500).json({ error:err.message})
+  
+    }
+  }
+

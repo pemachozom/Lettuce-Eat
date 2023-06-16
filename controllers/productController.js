@@ -3,7 +3,7 @@ exports.createProduct = async(req,res,next)=>{
     if(req.body.image !== 'undefined'){
             req.body.image = req.file.filename
     }
-    const product = new ProductRecord({...req.body,ownerData:req.user._id})
+    const product = new ProductRecord(req.body)
     try{
         const productData = await product.save()
         res.json({data:productData,status:"success"})
@@ -12,6 +12,15 @@ exports.createProduct = async(req,res,next)=>{
         res.status(500).json({error:err.message})
     }
 }
+// exports.createUser = async (req,res) => {
+//     try {
+//         const user = await User.create(req.body);
+//         console.log(req.body)
+//         res.json({data: user, status : "success"});
+//     } catch (err) {
+//         res.status(500).json({error : err.message});
+//     }
+// }'
 
 exports.getProductDetailsById = async(req,res)=>{
     try{
@@ -45,7 +54,7 @@ exports.getProductDetailsByIdForUser = async(req,res)=>{
 
 exports.getAllProductDetails = async(req,res,next)=>{
     try{
-        const productData = await ProductRecord.find().populate('ownerData')
+        const productData = await ProductRecord.find()
         // const bookingDataAndUserData = await bookingData.populate('ownerData')
         res.status(200).json({data:productData,status:"success"})
 
