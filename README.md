@@ -58,7 +58,8 @@ git clone <repo-url>
 cd lettuce-eat
 npm install
 npm start
-
+```
+---
 ## 📌 Status
 
-✅ Active project showcasing web development skills focused on building a user-friendly food ordering platform.
+✅ Successfully completed as a group project for the **CSF202: Agile Software Engineering Practice** course.
