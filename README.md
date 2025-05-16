@@ -35,6 +35,10 @@ This project followed the **Agile Framework**, implementing iterative developmen
 
 ---
 
+🔗 [Figma Design](https://www.figma.com/design/Xcuf6JujK8xWLykASvHNeD/Lettuce-Eat?node-id=0-1&p=f&t=3hHAuCRWUlad5UXj-0)
+
+---
+
 ## 🛠️ Technologies Used
 
 - 💻 Frontend: HTML, CSS, JavaScript  
